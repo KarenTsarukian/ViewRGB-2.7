@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -49,14 +50,23 @@
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="asd-ud-8bF">
                                         <rect key="frame" x="-2" y="0.0" width="286" height="31"/>
                                         <color key="minimumTrackTintColor" systemColor="systemRedColor"/>
+                                        <connections>
+                                            <action selector="redSliderAction" destination="BYZ-38-t0r" eventType="valueChanged" id="0vZ-dG-nH0"/>
+                                        </connections>
                                     </slider>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="vlb-sO-gcY">
                                         <rect key="frame" x="-2" y="46" width="286" height="31"/>
                                         <color key="minimumTrackTintColor" systemColor="systemGreenColor"/>
+                                        <connections>
+                                            <action selector="greenSliderAction" destination="BYZ-38-t0r" eventType="valueChanged" id="2KA-Qq-39R"/>
+                                        </connections>
                                     </slider>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="PJu-9r-yP6">
                                         <rect key="frame" x="-2" y="92" width="286" height="31"/>
                                         <color key="minimumTrackTintColor" systemColor="systemBlueColor"/>
+                                        <connections>
+                                            <action selector="blueColorAction" destination="BYZ-38-t0r" eventType="valueChanged" id="7ek-XU-wMc"/>
+                                        </connections>
                                     </slider>
                                 </subviews>
                             </stackView>
@@ -102,6 +112,15 @@
                             <constraint firstItem="Dug-4n-Wo0" firstAttribute="top" secondItem="Lgh-OO-wJu" secondAttribute="bottom" constant="26" id="zkM-rx-Z8l"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="blueColorSlider" destination="PJu-9r-yP6" id="dzX-vH-o9m"/>
+                        <outlet property="blueColorValue" destination="oDJ-j6-4I7" id="hgh-gV-Akq"/>
+                        <outlet property="greenColorSlider" destination="vlb-sO-gcY" id="JON-hr-kZb"/>
+                        <outlet property="greenColorValue" destination="Om0-wv-8aa" id="dVc-TM-MMe"/>
+                        <outlet property="redColorSlider" destination="asd-ud-8bF" id="qGa-vN-CHT"/>
+                        <outlet property="redColorValue" destination="BFE-RE-sCN" id="aOc-rA-80Z"/>
+                        <outlet property="viewMulticolor" destination="Lgh-OO-wJu" id="wrS-q5-vAW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
